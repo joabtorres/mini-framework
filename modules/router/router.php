@@ -26,7 +26,6 @@ class router
     }
 
     public function match () {
-
         $url = (isset($_GET['url'])) ? $_GET['url'] : '';
         switch ($_SERVER['REQUEST_METHOD']) {
             case 'GET':
@@ -41,7 +40,6 @@ class router
         foreach ($type as $pt => $func) {
             //identifica os argumentos e substitui por regex
             $pattern = preg_replace('(\{[a-z0-9]{0,}\})', '([a-z0-9]{0,})', $pt);
-
             //faz o match de URL
             if (preg_match('#^(' . $pattern . ')*$#i', $url, $matches) === 1) {
                 array_shift($matches);
@@ -59,6 +57,10 @@ class router
                 $func($arg);
                 break;
 
+            } else {
+                $template = template::getInstance();
+                $template->loadView('404');
+                break;
             }
         }
     }
