@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <title>Página não Encontrada</title>
+    <title>
+        <?php echo NAME_PROJECT ?>
+    </title>
     <style>
         * {
             margin: 0;
@@ -62,7 +64,7 @@
     <div class="container">
         <p>
             <span class="erro-404">404</span>
-            <a href="./">Página Inicial</a>
+            <a href="<?php echo BASE_URL ?>">Página Inicial</a>
         </p>
     </div>
 </body>
