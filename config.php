@@ -16,7 +16,7 @@ if (ENVIRONMENT == 'development') {
     //Nome do banco
     $config['db']['dbname'] = 'sispam';
     //host
-    $$config['db']['host'] = 'localhost';
+    $config['db']['host'] = 'localhost';
     //usuario
     $config['db']['user'] = 'root';
     //senha
