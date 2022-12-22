@@ -14,22 +14,22 @@ if (ENVIRONMENT == 'development') {
     //Raiz
     define("BASE_URL", "http://localhost/sispam/");
     //Nome do banco
-    $config['dbname'] = 'sispam';
+    $config['db']['dbname'] = 'sispam';
     //host
-    $config['host'] = 'localhost';
+    $$config['db']['host'] = 'localhost';
     //usuario
-    $config['user'] = 'root';
+    $config['db']['user'] = 'root';
     //senha
-    $config['pass'] = '';
+    $config['db']['pass'] = '';
 } else {
     //Raiz
     define("BASE_URL", "http://localhost/sispam/");
     //Nome do banco
-    $config['dbname'] = 'mini-framework';
+    $config['db']['dbname'] = 'mini-framework';
     //host
-    $config['host'] = 'localhost';
+    $config['db']['host'] = 'localhost';
     //usuario
-    $config['user'] = 'root';
+    $config['db']['user'] = 'root';
     //senha
-    $config['pass'] = '';
+    $config['db']['pass'] = '';
 };
